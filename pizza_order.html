@@ -4,150 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pizza by the Slice</title>
+    <link rel="stylesheet" href="/CSS/style.css">
   </head>
   <body>
-    <h1>Order Your Pizza</h1>
 
-    <form>
-      <p>1 | Enter your personal information:</p>
-      <label for="fname">Full Name: </label>
-      <input type="text" id="fname" name="fname" minlength="5" maxlength="60" />
-      <br/>
+    <div class="main-content">
+      <img src="assets/images/leaves.png" alt="Leaves" class="leaves-side"/>
+      <img src="assets/images/leaves2.png" alt="Leaves2" class="leaves2-side"/>
+      <img src="assets/images/food1.png" alt="Food1" class="food1-side"/>
+      <img src="assets/images/pizza.png" alt="Pizza" class="pizza-side"/>
+      <div class="main-title">
+        <h1>Order Your Pizza</h1>
+      </div>
+      <form>
+        <p id="personalinfo-box">1 | Enter your personal information:</p>
+        <label for="fname">Full Name: </label>
+        <input type="text" id="fname" name="fname" minlength="5" maxlength="60" />
+        <br/>
 
-      <label for="email">Email: </label>
-      <input type="email" id="email" name="email" required />
-      <br/>
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" required />
+        <br/>
 
-      <label for="phone">Phone: </label>
-      <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required/>
-      <br/>
+        <label for="phone">Phone: </label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required/>
+        <br/>
 
-      <label for="age">Age: </label>
-      <input type="number" id="age" name="age" min="13" max="99" required />
-      <br/>
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age" min="13" max="99" required />
+        <br/>
+        
+        <p id="select-box">2 | Select a pizza size:</p>
+
+        <p id="size-box">Sizes:</p>
+
+        <label for="small">
+        <input type="radio" id="small" name="pizza-size" value="small" />Small </label>
+        <br/>
+
+        <label for="medium">
+        <input type="radio" id="medium" name="pizza-size" value="medium" />Medium </label>
+        <br/>
+
+        <label for="large">
+        <input type="radio" id="large" name="pizza-size" value="large" />Large </label>
+        <br/>
+
+        <label for="extra-large">
+        <input type="radio" id="extra-large" name="pizza-size" value="extra-large" />Extra Large </label>
+        <br/>
+
+        <p id="select-box">3 | Select a crust type:</p>
+        <label for="crust">Choose a crust:</label>
+        <select id="crust" name="crust" required>
+        <option value="" disabled selected hidden>-- Choose a crust --</option>
+        <option value="thin">Thin</option>
+        <option value="thick">Thick</option>
+        <option value="stuffed">Stuffed</option>
+        <option value="gluten-free">Gluten-free</option>
+        </select>
+        <br/>
+
+        <p id="select-box">4 | Choose your sauce:</p>
+
+        <label for="sauce-select">Choose a sauce:</label>
+        <select id="sauce-select">
+        <optgroup label="Classic">
+        <option>Tomato</option>
+        <option>Garlic White</option>
+        </optgroup>
+        <optgroup label="Special">
+        <option>Pesto</option>
+        <option>Barbecue</option>
+        </optgroup>
+        </select>
+        <br/>
+
+        <p id="select-box">5 | Select your toppings:</p>
+        <label for="cheese"><input type="checkbox" id="cheese" name="cheese" checked="checked" disabled="disabled" value="yes"> Cheese</label><br>
+        
+        <label for="pepperoni"><input type="checkbox" id="pepperoni" name="pepperoni" value="yes"> Pepperoni</label><br>
       
-      <p>2 | Select a pizza size:</p>
-      <p>Sizes:</p>
-      <label for="small">
-      <input type="radio" id="small" name="pizza-size" value="small" />Small </label>
-      <br/>
+        <label for="mushrooms"><input type="checkbox" id="mushrooms" name="mushrooms" value="yes"> Mushrooms</label><br>
+        
+        <label for="onions"><input type="checkbox" id="onions" name="onions" value="yes"> Onions</label><br>
+        
+        <label for="bellpepper"><input type="checkbox" id="bellpepper" name="bellpepper" value="yes"> Bell Pepper</label><br>
+        
+        <label for="olives"><input type="checkbox" id="olives" name="olives" value="yes"> Olives</label><br>
+        
+        <label for="bacon"><input type="checkbox" id="bacon" name="bacon" value="yes"> Bacon</label><br>
+        
+        <label for="pineapple"><input type="checkbox" id="pineapple" name="pineapple" value="yes" 
+        title="Warning: Pineapple on pizza is controversial!"> Pineapple</label><br>
 
-      <label for="medium">
-      <input type="radio" id="medium" name="pizza-size" value="medium" />Medium </label>
-      <br/>
+        <p id="select-box">6 | Delivery Method</p>
+        <p id="option-box">Options:</p>
+        <label for="StorePickup">
+        <input type="radio" id="StorePickup" name="delivery-method" value="store-pickup" /> Store Pickup</label>
+        <br/>
+        <label for="HomeDelivery">
+        <input type="radio" id="HomeDelivery" name="delivery-method" value="delivery" /> Home Delivery</label>
+        <br/>
 
-      <label for="large">
-      <input type="radio" id="large" name="pizza-size" value="large" />Large </label>
-      <br/>
-
-      <label for="extra-large">
-      <input type="radio" id="extra-large" name="pizza-size" value="extra-large" />Extra Large </label>
-      <br/>
-
-      <p>3 | Select a crust type:</p>
-      <label for="crust">Choose a crust:</label>
-      <select id="crust" name="crust" required>
-      <option value="" disabled selected hidden>-- Choose a crust --</option>
-      <option value="thin">Thin</option>
-      <option value="thick">Thick</option>
-      <option value="stuffed">Stuffed</option>
-      <option value="gluten-free">Gluten-free</option>
-      </select>
-      <br/>
-
-      <p>4 | Choose your sauce:</p>
-
-      <label for="sauce-select">Choose a sauce:</label>
-      <select id="sauce-select">
-      <optgroup label="Classic">
-      <option>Tomato</option>
-      <option>Garlic White</option>
-      </optgroup>
-      <optgroup label="Special">
-      <option>Pesto</option>
-      <option>Barbecue</option>
-      </optgroup>
-      </select>
-      <br/>
-
-      <p>5 | Select your toppings:</p>
-      <input type="checkbox" id="cheese" name="cheese" checked="checked" disabled="disabled" value="yes">
-      <label for="cheese"> Cheese</label><br>
-      <input type="checkbox" id="pepperoni" name="pepperoni" value="yes">
-      <label for="pepperoni"> Pepperoni</label><br>
-      <input type="checkbox" id="mushrooms" name="mushrooms" value="yes">
-      <label for="mushrooms"> Mushrooms</label><br>
-      <input type="checkbox" id="onions" name="onions" value="yes">
-      <label for="onions"> Onions</label><br>
-      <input type="checkbox" id="bellpepper" name="bellpepper" value="yes">
-      <label for="bellpepper"> Bell Pepper</label><br>
-      <input type="checkbox" id="olives" name="olives" value="yes">
-      <label for="olives"> Olives</label><br>
-      <input type="checkbox" id="bacon" name="bacon" value="yes">
-      <label for="bacon"> Bacon</label><br>
-      <input type="checkbox" id="pineapple" name="pineapple" value="yes" 
-      title="Warning: Pineapple on pizza is controversial!">
-      <label for="pineapple"> Pineapple</label><br>
-
-      <p>6 | Delivery Method</p>
-      <p>Options:</p>
-      <label for="StorePickup">
-      <input type="radio" id="StorePickup" name="delivery-method" value="store-pickup" /> Store Pickup</label>
-      <br/>
-      <label for="HomeDelivery">
-      <input type="radio" id="HomeDelivery" name="delivery-method" value="delivery" /> Home Delivery</label>
-      <br/>
-
-      <label for="address">Address:</label><br>
-      <textarea id="address" name="address" placeholder="Enter your full address here..." rows="3"></textarea>
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" placeholder="Enter your full address here..." rows="3"></textarea>
       
-      <p>7 | Payment Information</p>
-      <fieldset>
-        <legend>Payment Details</legend>
-        <label for="Payment">Payment Method:</label>
-        <select id="Payment" name="Payment" required>
+        <p id="select-box">7 | Payment Information</p>
+        <fieldset>
+          <legend>Payment Details</legend>
+          <label for="Payment">Payment Method:</label>
+          <select id="Payment" name="Payment" required>
           <option value="" >Choose a payment method</option>
           <option value="credit">Credit Card</option>
           <option value="debit">Debit Card</option>
           <option value="cash">Cash</option>
-        </select>
-        <br>
-        <label for="card-number">Required for credit card only:</label>
-        <input type="text" id="card-number" name="card-number"placeholder="1234567890123456"pattern="\d{16}">
-      </fieldset>
+          </select>
+          <br>
+          <label for="card-number">Required for credit card only:</label>
+          <input type="text" id="card-number" name="card-number"placeholder="1234567890123456"pattern="\d{16}">
+        </fieldset>
 
-      <p>8 | Order Summary</p>
+        <p id="order-box">8 | Order Summary</p>
 
-      <table border="1">
-        <tr>
-          <th>Size</th>
-          <th>Base Price</th>
-          <th>Extra Toppings (each)</th>
-        </tr>
-        <tr>
-          <td>Small</td>
-          <td>₱199</td>
-          <td>+₱20</td>
-        </tr>
-        <tr>
-          <td>Medium</td>
-          <td>₱299</td>
-          <td>+₱25</td>
-        </tr>
-        <tr> 
-          <td>Large</td>
-          <td>₱399</td>
-          <td>+₱30</td>
-        </tr>
-        <tr>
-          <td>Extra Large</td>
-          <td>₱499</td>
-          <td>+₱35</td>
-        </tr>
-      </table>
-      <p>9 | Form Button</p>
-      <button type="submit">Place My Order</button>
-      <button type="reset">Start Over</button>
-    </form>
+        <table class="price-table">
+          <tr>
+            <th>Size</th>
+            <th>Base Price</th>
+            <th>Extra Toppings (each)</th>
+          </tr>
+          <tr>
+            <td>Small</td>
+            <td>₱199</td>
+            <td>+₱20</td>
+          </tr>
+          <tr>
+            <td>Medium</td>
+            <td>₱299</td>
+            <td>+₱25</td>
+          </tr>
+          <tr> 
+            <td>Large</td>
+            <td>₱399</td>
+            <td>+₱30</td>
+          </tr>
+          <tr>
+            <td>Extra Large</td>
+            <td>₱499</td>
+            <td>+₱35</td>
+          </tr>
+        </table>
+        <p id="formbutt-box">9 | Form Button</p>
+        <button type="submit">Place My Order</button>
+        <button type="reset">Start Over</button>
+      </form>
+    </div>
   </body>
 </html>
